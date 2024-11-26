@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up - MealMend</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="test1.css" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <img src="../images/MealMend.jpg" alt="logo" />
+                <h3>MealMend</h3>
+            </div>
+        </header>
+
+        <section class="form-section">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input
+                    type="text"
+                    id="signup-name"
+                    placeholder="Name"
+                    required
+                />
+                <input
+                    type="email"
+                    id="signup-email"
+                    placeholder="Email"
+                    required
+                />
+                <button type="button" id="send-otp">Send OTP</button>
+
+                <!-- OTP Input -->
+                <input
+                    type="text"
+                    id="otp-code"
+                    placeholder="Enter OTP"
+                    required
+                    style="display: none"
+                />
+
+                <input
+                    type="password"
+                    id="signup-password"
+                    placeholder="Password"
+                    required
+                />
+                <div
+                    class="password-strength"
+                    id="password-strength"
+                    style="display: none"
+                ></div>
+                <div class="show-password">
+                    <input type="checkbox" id="showPassword" />
+                    <label for="showPassword">Show Password</label>
+                </div>
+                <select id="user-role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="donor">Donor</option>
+                    <option value="partner">Partner</option>
+                    <option value="volunteer">Volunteer</option>
+                </select>
+                <button type="submit">Sign Up</button>
+                <div class="loading" id="loading" style="display: none">
+                    Loading...
+                </div>
+            </form>
+            <p>
+                Already have an account? <a href="../Login/login.html">Login</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 MealMend. All Rights Reserved.</p>
+        </footer>
+
+        <script src="../test1/test1.js"></script>
+        <!-- <script src="signup.js"></script> -->
+    </body>
+</html>

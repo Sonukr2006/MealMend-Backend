@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Form - MealMend</title>
+</head>
+<body>
+    <h2>Donor Form</h2>
+    <form id="donor-form">
+        <label for="food-item">Food Item:</label>
+        <input type="text" id="food-item" placeholder="Food Item" required />
+        
+        <label for="quantity">Quantity (in kg):</label>
+        <input type="number" id="quantity" placeholder="Quantity" required />
+        
+        <label for="food-quality">Food Quality:</label>
+        <select id="food-quality" required>
+            <option value="" disabled selected>Select Food Quality</option>
+            <option value="Fresh">Fresh</option>
+            <option value="Expired">Expired</option>
+            <option value="Near Expiry">Near Expiry</option>
+        </select>
+        
+        <button type="submit">Donate</button>
+    </form>
+</body>
+</html>

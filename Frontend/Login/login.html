@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login - MealMend</title>
+        <link rel="stylesheet" href="login.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <img src="../images/MealMend.jpg" alt="logo" />
+                <h3>MealMend</h3>
+            </div>
+        </header>
+
+        <div class="form-section">
+            <h2>Login</h2>
+            <form action="/api/users/login" method="POST" enctype="multipart/form-data">
+                <input type="email" id="email" name="email" placeholder="Enter your email" />
+                <a href="" id="Usingphone">Using phone-no.</a>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                />
+
+                <div class="show-password">
+                    <input type="checkbox" id="showPassword" />
+                    <label for="showPassword">Show Password</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+            <div id="popupContainer"> </div>
+            <p>
+                Don't have an account?
+                <a href="../register/register.html">Register</a>
+            </p>
+            <p>
+                Forgot your password?
+                <a href="../ForgetPassword/Forget.html">Reset Password</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 MealMend. All Rights Reserved.</p>
+        </footer>
+        <script type="module" src="login.js"></script>
+    </body>
+</html>

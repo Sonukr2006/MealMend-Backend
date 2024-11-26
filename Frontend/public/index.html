@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="public/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../images/MealMend.jpg" alt="logo" />
+        <h3>MealMend</h3>
+      </div>
+      <i class="fa-solid fa-xmark" id="close"></i>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="../Login/login.html">Login</a></li>
+          <li><a href="../register/register.html">Register</a></li>
+        </ul>
+      </nav>
+      <i class="fa-solid fa-bars" id="open"></i>
+    </header>
+    <section class="hero">
+      <video class="hero-video" id="background-video" muted loop>
+        <source
+          src="../images/ProjectVideo.mp4"
+          type="video/mp4"
+          id="video-source"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay" style="text-decoration: none;">
+        <div class="hero-content">
+          <p class="tagline">WE MAKE IT EASY TO</p>
+          <h1>Find, Secure and Deliver Food</h1>
+          <pre class="description">
+            We are a non-profit enabling the exchange of excess food
+                from thefood industry to those who need it most.
+          </pre>
+          <div class="cta-buttons">
+            <a href="../public/joinpage.html" class="btn donate-food">Join with MealMend</a>
+            <!-- <a href="#" class="btn secure-food">Secure Food</a> -->
+          </div>
+        </div>
+      </div>
+      SVG for Curve
+      <svg
+        class="curve"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 120"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="2"
+          d="M0,64L80,80C160,96,420,128,480,128C640,128,800,96,960,80C1120,64,1280,64,1360,64L1440,64V120H0Z"
+        ></path>
+      </svg>
+      
+    </section>
+    <section class="Location">
+      <div class="location-input">
+        <form id="location-form">
+          <label for="location" id="">Enter your location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter location"
+          />
+          <button type="submit" id="button">Submit</button>
+        </form>
+      </div>
+    </section>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="image-card">
+          <img src="../images/slide3.jpeg" alt="Image 1" />
+          <div class="card-content">
+            <h3>Image Title 1</h3>
+            <p>Description for image 1</p>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="../images/slide1.jpg" alt="Image 2" />
+          <div class="card-content">
+            <h3>Image Title 2</h3>
+            <p>Description for image 2</p>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="../images/slide2.jpg" alt="Image 3" />
+          <div class="card-content">
+            <h3>Image Title 3</h3>
+            <p>Description for image 3</p>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="../images/slide3.jpeg" alt="Image 3" />
+          <div class="card-content">
+            <h3>Image Title 4</h3>
+            <p>Description for image 4</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="how-it-works" class="section">
+      <h3>How It Works</h3>
+      <div class="steps">
+        <div class="step">
+          <h4>Step 1: Collection</h4>
+          <p>We collect food waste from your home or business.</p>
+        </div>
+        <div class="step">
+          <h4>Step 2: Sorting</h4>
+          <p>Sorting food items for proper recycling or composting.</p>
+        </div>
+        <div class="step">
+          <h4>Step 3: Recycling</h4>
+          <p>Turning food waste into useful compost or resources.</p>
+        </div>
+        <div class="step">
+          <h4>Step 4: Distribution</h4>
+          <p>Delivering compost to community gardens and farmers.</p>
+        </div>
+      </div>
+      <div class="Food">
+        <h3>For High-Quality Food Donations</h3>
+        <div class="steps" id="Food">
+          <div class="step">
+            <h4>Step 1: Food Donation</h4>
+            <p>
+              Donors provide details about the high-quality food they wish to
+              donate, including type, quantity, and quality.
+            </p>
+          </div>
+          <div class="step">
+            <h4>Step 2: Quality Assessment</h4>
+            <p>
+              Our team assesses the donated food to ensure it meets safety and
+              quality standards.
+            </p>
+          </div>
+          <div class="step">
+            <h4>Step 3: Collection</h4>
+            <p>
+              We arrange for the collection of the food from the donor's
+              location at a convenient time.
+            </p>
+          </div>
+          <div class="step">
+            <h4>Step 4: Distribution</h4>
+            <p>
+              The collected food is delivered to local charities, shelters, or
+              community organizations that can utilize it effectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h3>Our Services</h3>
+      <div class="services">
+        <div class="service-card">
+          <h4>Food Waste Collection</h4>
+          <p>We collect food waste from your doorstep and recycle it.</p>
+        </div>
+        <div class="service-card">
+          <h4>Composting Guide</h4>
+          <p>Learn how to compost at home with our expert guide.</p>
+        </div>
+        <div class="service-card">
+          <h4>Community Gardens</h4>
+          <p>Supporting local gardens with eco-friendly compost.</p>
+        </div>
+        <div class="service-card">
+          <h4>Educational Workshops</h4>
+          <p>Attend our workshops to learn about sustainable practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us" class="section">
+      <h3>About Us</h3>
+      <p>
+        At MealMend, we are committed to reducing food waste and promoting
+        sustainability. Our mission is to make a difference, one meal at a time.
+      </p>
+      <p>
+        Join us in our journey to create a healthier planet for future
+        generations!
+      </p>
+    </section>
+
+    <section id="Allcontact">
+      <section id="contact" class="section">
+        <h3 style="background-color: blueviolet;"> Contact Us </h3>
+        <form id="contact-form" method="POST" action="/api/users/contact" enctype="multipart/form-data">
+          <input type="text" id="name" placeholder="Your Name" name="name" required />
+          <input type="email" id="email" placeholder="Your Email" name="email" required />
+          <textarea id="message" placeholder="Your Message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <section>
+        <div id="contect">
+          <pre><i class="fa-solid fa-envelope"></i>:<p>@mealmend750@gmail.com</p></pre>
+          <pre><i class="fa-solid fa-mobile-screen-button"></i>:<p>7050128940</p></pre>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <i class="fa-solid fa-recycle"></i>
+
+      <p>&copy; 2024 MealMend. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script src="public/index.js"></script>
+</html>

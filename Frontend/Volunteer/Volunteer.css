@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+    animation-duration: 3s;
+    animation-name: spin;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    0%,
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.2);
+        border-radius: 50%;
+    }
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.profile-card {
+    margin-top: 100px;
+    margin: 150px auto;
+    max-width: 800px;
+    padding: 20px;
+    width: 95%;
+}
+.profile-card p {
+    padding: 6px;
+}
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-picture {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #e9e9e9;
+    border: 2px solid #4caf50;
+}
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card .details {
+    flex: 1;
+}
+.profile-card .details .edit-btn {
+    background-color: #6f3710;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.profile-card .details button:hover {
+    background-color: #4caf50;
+}
+
+#dashboard {
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#current-tasks,
+#completed-tasks {
+    margin-bottom: 20px;
+}
+#task-details {
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#live-tracking {
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#feedback {
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+#task-list,
+#completed-task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li,
+#completed-task-list li {
+    padding: 10px;
+    background: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list li:hover {
+    background: #e0e0e0;
+}
+
+button {
+    padding: 10px 15px;
+    background: #6f3710;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#map {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#emergency-contact {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #8b4513;
+    color: #000;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #profile,
+    #dashboard {
+        width: 95%;
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 50px; /* Adjusted for smaller screens */
+    }
+}

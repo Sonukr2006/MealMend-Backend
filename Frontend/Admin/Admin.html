@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Dashboard - MealMend</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Admin.css" />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <img src="../images/MealMend.jpg" alt="MealMend Logo" />
+                <h3>Admin Dashboard</h3>
+            </div>
+            <nav>
+                <a href="#volunteers">Volunteers</a>
+                <a href="#requests">Requests</a>
+                <a href="#alerts">Alerts</a>
+                <a href="#history">History</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="donations">
+                <h2>Donations</h2>
+                <table id="donation-list">
+                    <thead>
+                        <tr>
+                            <th>Donor ID</th>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Quality</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donation-table-body"></tbody>
+                </table>
+            </section>
+
+            <section id="requests">
+                <h2>Requests</h2>
+                <table id="request-list">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Requested Item</th>
+                            <th>Quantity</th>
+                            <th>Details</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="request-table-body">
+                        <!-- Requested items will be populated here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="requests">
+                <h2>Requests Management</h2>
+                <div class="request-types">
+                    <button onclick="viewDonations()">Donation Requests</button>
+                    <button onclick="viewPickups()">Pickup Requests</button>
+                </div>
+                <table id="request-table">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                            <th>Assign to Volunteer</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section id="volunteers">
+                <h2>Volunteer Management</h2>
+                <button onclick="addVolunteer()">Add New Volunteer</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Current Task</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="volunteer-table-body"></tbody>
+                </table>
+            </section>
+
+            <section id="alerts">
+                <h2>Send Alerts/Notifications</h2>
+                <form id="alert-form">
+                    <label for="alert-message">Alert Message:</label>
+                    <textarea id="alert-message" required></textarea>
+                    <label for="alert-recipient">Send to:</label>
+                    <select id="alert-recipient" required>
+                        <option value="volunteers">Volunteers</option>
+                        <option value="donors">Donors</option>
+                        <option value="requesters">Requesters</option>
+                    </select>
+
+                    <button type="submit">Send Alert</button>
+                </form>
+            </section>
+
+            <section id="history">
+                <h2>Task and Request History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>MealMend © 2023 - All rights reserved.</p>
+        </footer>
+
+        <script src="Admin.js"></script>
+    </body>
+</html>

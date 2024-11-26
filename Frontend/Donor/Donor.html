@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Profile - MealMend</title>
+    <link rel="stylesheet" href="Donor.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="../images/MealMend.jpg" alt="logo" />
+        <h3>MealMend</h3>
+      </div>
+      <i class="fa-solid fa-xmark" id="close"></i>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="../Home/index.html">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+        </ul>
+      </nav>
+      <i class="fa-solid fa-bars" id="open"></i>
+    </header>
+
+    <!-- Donor Profile Section -->
+    <section id="donor-profile">
+      <div class="profile-header">
+        <div class="profile-picture">
+          <label for="profilePicInput">
+            <img src="" alt="Profile Picture" id="profile-pic" />
+          </label>
+        </div>
+        <div class="profile-info">
+          <h2 id="donor-name"></h2>
+          <p>
+            Email :-
+            <span id="donor-email"></span>
+          </p>
+          <p>
+            Phone Number :-
+            <span id="donor-number"></span>
+          </p>
+          <button id="edit-profile-btn">Edit Profile</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Donation History -->
+
+    <!-- Food Donation Section -->
+    <section id="food-donation">
+      <h3>Food Donation</h3>
+      <div id="food-type-selection">
+        <h4>Select Food Type</h4>
+        <div class="food-option" id="dry-food">
+          <img src="../images/option2.jpeg" alt="Dry Food" />
+          <p>Dry Food</p>
+        </div>
+        <div class="food-option" id="wet-food">
+          <img src="../images/Option 1.jpeg" alt="Wet Food" />
+          <p>Wet Food</p>
+        </div>
+      </div>
+
+      <!-- Dry Food Form -->
+      <form
+        id="dry-food-form"
+        style="display: none"
+        method="POST"
+        action="/api/users/request"
+        enctype="multipart/form-data"
+      >
+        <h4>Dry Food Donation</h4>
+        <label for="food-type">Item-Type:</label>
+        <select id="type" required>
+          <option value="Dry">Dry</option>
+          <!-- <option value="High">Good</option> -->
+        </select>
+
+        <label for="dry-food-name">Item Name:</label>
+        <input
+          type="text"
+          id="food-name"
+          class="itemname"
+          placeholder="Enter Item name"
+          required
+        />
+
+        <label for="dry-food-quantity">Quantity (kg):</label>
+        <input
+          type="number"
+          id="food-quantity"
+          class="Quantity"
+          min="1"
+          required
+        />
+
+        <label for="wet-food-quality">Quality:</label>
+        <select id="food-quality" required class="Quality">
+          <option value="Low">Low</option>
+          <option value="High">Good</option>
+        </select>
+
+        <label for="food-address">Address:</label>
+        <input
+          type="text"
+          id="food-address"
+          class="address"
+          placeholder="Enter your address"
+          required
+        />
+
+        <label for="contact-number">Contact Number:</label>
+        <input
+          type="phone"
+          id="contact-number"
+          class="phone"
+          placeholder="Enter your contact number"
+          required
+        />
+
+        <label for="dry-pickup-date">Pickup Date:</label>
+        <input type="date" id="pickup-date" class="Pickup" required />
+
+        <lebel for="Item-description">Item Description:</lebel>
+        <textarea
+          placeholder="Enter your item description here..."
+          id="ItemDescription"
+          required
+        ></textarea>
+
+        <button type="submit">Submit Dry Food Donation</button>
+      </form>
+
+      <!-- Wet Food Form -->
+      <form
+        id="wet-food-form"
+        style="display: none"
+        method="POST"
+        action="/api/users/request"
+        enctype="multipart/form-data"
+      >
+        <h4>Wet Food Donation</h4>
+        <label for="food-type">Item-Type:</label>
+        <select id="wet-type" required>
+          <option value="Wet">Wet</option>
+        </select>
+        <label for="wet-food-name">Food Name:</label>
+        <input
+          type="text"
+          id="wet-name"
+          placeholder="Enter item name"
+          required
+        />
+
+        <label for="wet-food-quantity">Quantity (kg):</label>
+        <input type="number" id="wet-quantity" min="1" required />
+
+        <label for="wet-food-quality">Quality:</label>
+        <select id="wet-quality" required>
+          <option value="High">Good</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <label for="wet-food-address">Address:</label>
+        <input
+          type="text"
+          id="wet-address"
+          placeholder="Enter your address"
+          required
+        />
+
+        <label for="contact-number">Contact Number:</label>
+        <input
+          type="phone"
+          id="number"
+          placeholder="Enter your contact number"
+          required
+        />
+
+        <label for="wet-pickup-date">Pickup Date:</label>
+        <input type="date" id="date" required />
+
+        <lebel for="Item-description">Item Description:</lebel>
+        <textarea
+          placeholder="Enter your item description here..."
+          id="wet-itemDescription"
+          required
+        ></textarea>
+
+        <button type="submit">Submit Wet Food Donation</button>
+      </form>
+    </section>
+    <section id="donation-history">
+      <h3>Donation History</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Food Item</th>
+            <th>Quantity (kg)</th>
+            <th>Quality</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="history-table"></tbody>
+      </table>
+    </section>
+    <section id="notification-section">
+      <h3>Notifications</h3>
+      <div id="notifications"></div>
+    </section>
+
+    <!-- Feedback Section at the Bottom -->
+    <section id="feedback-section">
+      <h3>Feedback</h3>
+      <form
+        id="feedbackForm"
+        method="POST"
+        action="/api/users/feedback"
+        enctype="multipart/form-data"
+      >
+        <textarea
+          id="feedback"
+          placeholder="Share your feedback..."
+          required
+        ></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; 2024 MealMend. All Rights Reserved.</p>
+    </footer>
+
+    <script src="Donor.js"></script>
+  </body>
+</html>

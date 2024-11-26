@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Partner/Recipient Profile - MealMend</title>
+        <link rel="stylesheet" href="receiver.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <img src="../images/MealMend.jpg" alt="logo" />
+                <h3>MealMend</h3>
+            </div>
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="../Home/index.html">Home</a></li>
+
+                    <li><a href="#about-us">About</a></li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars" id="open"></i>
+        </header>
+        <div class="container">
+            <!-- Profile card section -->
+            <div class="profile-card">
+                <div class="profile-picture">
+                    <label for="profilePicInput">
+                        <img
+                            src=""
+                            alt="Profile Picture"
+                            id="profile-pic"
+                        />
+                    </label>
+                </div>
+                <div class="details">
+                    <h2 id="name"></h2>
+                    <p>
+                        Email :-
+                        <span id="email"></span>
+                    </p>
+                    <p>
+                        Phone Number :-
+                        <span id="phone"></span>
+                    </p>
+                    <button class="edit-btn">Edit Profile</button>
+                </div>
+            </div>
+
+            <!-- Request Food Form -->
+            <form id="Item-request-form">
+                <h4>Item Request Form</h4>
+                <label for="Item-type">ItemType: optionally</label>
+                <select id="Item-type" required>
+                    <option value="Low">Dry</option>
+                    <option value="Medium">wet</option>
+                    <!-- <option value="High">High</option> -->
+                </select>
+
+                <label for="Item-name">Item Name:</label>
+                <input
+                    type="text"
+                    id="Item-name"
+                    placeholder="Enter Item name"
+                    required
+                />
+
+                <label for="item-quantity">Quantity (kg):</label>
+                <input type="number" id="Item-quantity" min="1" required />
+
+                <label for="Item-quality">Quality:</label>
+                <select id="Item-quality" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Good</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="request-address">Address:</label>
+                <input
+                    type="text"
+                    id="request-address"
+                    placeholder="Enter your address"
+                    required
+                />
+
+                <label for="contact-number">Contact Number:</label>
+                <input
+                    type="text"
+                    id="contact-number"
+                    placeholder="Enter your contact number"
+                    required
+                />
+                <lebel for="Item-description">Item Description:</lebel>
+                <textarea
+                    placeholder="Enter your item description here..."
+                    id="Item-description"
+                    required
+                ></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+
+            <!-- Request history section -->
+            <div class="Request-history">
+                <h3>Request History</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity (kg)</th>
+                            <th>Quality</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bananas</td>
+                            <td>2</td>
+                            <td>Good</td>
+                            <td>Accepted</td>
+                            <td>2024-10-27</td>
+                        </tr>
+                        <tr>
+                            <td>Rice</td>
+                            <td>5</td>
+                            <td>Fair</td>
+                            <td>Pending</td>
+                            <td>2024-10-28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Notifications section -->
+            <div class="notifications">
+                <h3>Notifications</h3>
+                <p>No new notifications.</p>
+            </div>
+
+            <!-- Feedback section -->
+            <form class="feedback" id="feedbackForm">
+                <h3>Feedback</h3>
+                <textarea placeholder="Share your feedback..." id="feedback"></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; 2024 MealMend. All Rights Reserved.</p>
+        </footer>
+
+        <script src="receiver.js"></script>
+    </body>
+</html>
